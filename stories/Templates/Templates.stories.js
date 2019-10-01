@@ -3,8 +3,9 @@ import { withKnobs } from '@storybook/addon-knobs/react'
 import { withA11y } from '@storybook/addon-a11y'
 import { withInfo } from '@storybook/addon-info'
 
-import Homepage from './homepage/Homepage'
-import Amministrazione from './amministrazione/Amministrazione'
+import Homepage from './others/Homepage'
+import Amministrazione from './first-level/Amministrazione'
+import Servizi from './first-level/Servizi'
 
 storiesOf('Introduzione/Introduzione/Kit Comuni', module)
   .addDecorator(withA11y)
@@ -16,8 +17,14 @@ storiesOf('Introduzione/Introduzione/Kit Comuni', module)
     })(Homepage)
   )
   .add(
-    'Amministrazione Template',
+    'Amministrazione - Primo livello - Template',
     withInfo({
       // text: Esempi
     })(Amministrazione)
+  )
+  .add(
+    'Servizi - Primo livello - Template',
+    withInfo({
+      // text: Esempi
+    })(Servizi)
   )
